@@ -1,0 +1,19 @@
+include extends
+include ../blocks/blocks
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        +css("main.css")
+        block css
+        title 
+            block title
+    body.page
+        block body
+        +js('vendors.js')
+        +js('main.js')       
+        block js
+

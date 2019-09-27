@@ -1,0 +1,15 @@
+extends templates/main
+
+block css    
+    +css("main.css")
+    +css("about.css")
+block title 
+    | index.html
+block body 
+    +header()
+    +main()
+    +footer()
+block js
+    +js('vendors.js')
+    +js('main.js')
+    +js('about.js')

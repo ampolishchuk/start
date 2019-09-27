@@ -1,0 +1,5 @@
+mixin logo(mixinClass)
+    - var mixinClass = mixinClass?' ' + mixinClass:'';
+
+    section(class=`logo${mixinClass}`)
+        img(class=`logo-image`, src="./img/logo.svg", alt="", srcset="")

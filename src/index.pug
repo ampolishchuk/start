@@ -1,0 +1,24 @@
+extends templates/main
+
+block css
+    +css("index.css")
+block title 
+    | index.html
+block body 
+    +header()
+        +logo('header-logo')
+        +menu('header-menu')
+        +login('header-login')
+        +skills('header-skills')
+            +skills-item(["hello", "hello.png", "hello world!"], 'header-skill')
+            +skills-item(["hello", "hello.png", "hello world!"], 'header-skill')
+            +skills-item(["hello", "hello.png", "hello world!"], 'header-skill')
+            +skills-item(["hello", "hello.png", "hello world!"], 'header-skill')
+    +main()
+        +about()
+        +skills()
+            +skills-item(["hello", "hello.png", "hello world!"], 'skills-item')
+            +skills-item(["hello2", "hello2.png", "hello2 world!"], 'skills-item')
+    +footer()
+block js
+    +js('index.js')

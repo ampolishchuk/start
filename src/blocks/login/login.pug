@@ -1,0 +1,5 @@
+mixin login(mixinClass)
+    - var mixinClass = mixinClass?' ' + mixinClass:'';
+    
+    form(class=`login${mixinClass}` action="")
+        input(type="text")

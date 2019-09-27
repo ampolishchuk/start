@@ -1,0 +1,5 @@
+mixin main(mixinClass) 
+    - var mixinClass = mixinClass?' ' + mixinClass:'';
+
+    main(class=`main${mixinClass}`)
+        block
