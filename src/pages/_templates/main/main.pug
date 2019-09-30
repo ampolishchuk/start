@@ -1,5 +1,5 @@
-include extends
-include ../blocks/blocks
+include ../../../pug/mixins
+include ../../../blocks/blocks
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -11,8 +11,9 @@ html(lang="ru")
         block css
         title 
             block title
-    body.page
-        block body
+    body
+        block body 
+
         +js('vendors.js')
         +js('main.js')       
         block js

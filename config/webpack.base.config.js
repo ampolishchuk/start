@@ -13,22 +13,27 @@ const PATHS = {
     s_img: 'img',
     s_static: 'static'
 }
-// Точки вхождения для вебпака
-PATHS.s_entires = `${PATHS.s_src}/entries/`;
+// Директории точек вхождения для вебпака
+PATHS.s_pages = `${PATHS.s_src}/pages`;
+PATHS.s_templates = `${PATHS.s_pages}/_templates`;
+
 // Имена файлов .pug в директории разработки
-PATHS.a_pages = fs.readdirSync(PATHS.s_src)
-    .filter(s_fileName => s_fileName.endsWith('.pug'))
-    .map(s_fileName => s_fileName.replace('.pug', ''));
+PATHS.a_templates = fs.readdirSync(PATHS.s_templates)
+PATHS.a_pages = fs.readdirSync(PATHS.s_pages)
+PATHS.a_pages.pop()
+
+console.log(PATHS.a_templates)
+console.log(PATHS.a_pages)
 
 module.exports = {
-    entry: {
-        main: `${PATHS.s_entires}/main.js`,
-        index: `${PATHS.s_entires}/index.js`,
-        about: `${PATHS.s_entires}/about.js`
-    },
     externals: {
         paths: PATHS // Подключение внешних объектов
-    },    
+    },  
+    entry: {
+        main: `${PATHS.s_pages}/_templates/main/main.js`,
+        index: `${PATHS.s_pages}/index/index.js`,
+        about: `${PATHS.s_pages}/about/about.js`
+    },  
     output: {
         filename: `${PATHS.s_js}/[name].js`, // Точка выхода
         path: PATHS.s_dist // Путь сохранения файла при сборке
@@ -90,7 +95,7 @@ module.exports = {
     },
     plugins: [
         ...PATHS.a_pages.map(s_pageName => new HtmlWebpackPlugin({
-            template: `${PATHS.s_src}/${s_pageName}.pug`, // Файл шаблона 
+            template: `${PATHS.s_pages}/${s_pageName}/${s_pageName}.pug`, // Файл шаблона 
             filename: `${PATHS.s_dist}/${s_pageName}.html`, // Обработанный файл
             inject: false
         })),

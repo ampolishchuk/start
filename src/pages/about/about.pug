@@ -1,0 +1,14 @@
+extends ../_templates/main/main
+
+block css
+    +css("about.css")
+block title 
+    | about.html
+block body 
+    +header()
+        +logo('header-logo')
+        +menu('header-menu')
+    +main()
+    +footer()
+block js
+    +js('about.js')
