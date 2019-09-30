@@ -1,0 +1,10 @@
+@import 'templates/main'
+
+@include header()
+    @include skills()
+        @include skills-item('header_skills')
+            @include header_skills()
+@include main()
+    @include about()
+    @include skills()
+        @include skills-item()

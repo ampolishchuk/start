@@ -1,0 +1,8 @@
+@mixin login($mixinClass:'')
+    @if $mixinClass != ''
+        $mixinClass: '.#{$mixinClass}'
+
+    .login#{$mixinClass}
+        
+
+        @content

@@ -52,7 +52,7 @@ module.exports = {
                 loader: 'pug-loader' // Используемый loader
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss|sass)$/,
                 use: [
                     'style-loader',
                     MiniCssExtractPlugin.loader,

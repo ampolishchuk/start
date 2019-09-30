@@ -1,0 +1,10 @@
+@import 'header_skills'
+
+@mixin header($mixinClass:'')
+    @if $mixinClass != ''
+        $mixinClass: '.#{$mixinClass}'
+
+    header#{$mixinClass}
+        background-color: $color_bg
+
+        @content

@@ -1,0 +1,8 @@
+@mixin about($mixinClass:'')
+    @if $mixinClass != ''
+        $mixinClass: '.#{$mixinClass}'
+
+    .about#{$mixinClass}
+        
+
+        @content

@@ -1,0 +1,8 @@
+@mixin footer($mixinClass:'')
+    @if $mixinClass != ''
+        $mixinClass: '.#{$mixinClass}'
+
+    footer#{$mixinClass}
+        
+
+        @content

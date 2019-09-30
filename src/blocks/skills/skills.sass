@@ -1,0 +1,10 @@
+@import 'skills-item/skills-item'
+    
+@mixin skills($mixinClass:'')
+    @if $mixinClass != ''
+        $mixinClass: '.#{$mixinClass}'
+
+    .skills#{$mixinClass}
+        
+
+        @content

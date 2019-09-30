@@ -1,1 +1,0 @@
-import '../blocks/about/about.scss';
