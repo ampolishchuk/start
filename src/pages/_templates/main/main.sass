@@ -1,9 +1,9 @@
-@import '../../../sass/variables'
-@import '../../../blocks/blocks'
+@import '../../../core/init'
 
-@include header()
-    @include logo()
-    @include menu()
-@include main()
-@include footer()
-    @include menu('footer-menu')
+@include page()
+    @include header()
+        @include logo()
+        @include menu()
+    @include main()
+    @include footer()
+        @include menu('footer-menu')

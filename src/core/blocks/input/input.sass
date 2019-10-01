@@ -1,0 +1,8 @@
+@mixin input($mixinClass:'')
+    @if $mixinClass != ''
+        $mixinClass: '.#{$mixinClass}'
+
+    input#{$mixinClass}
+        
+
+        @content

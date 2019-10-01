@@ -1,0 +1,6 @@
+mixin page(mixinClass)
+    - var mixinClass = mixinClass?' ' + mixinClass:''
+
+    div(class=`page${mixinClass}`)
+        
+        block

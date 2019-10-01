@@ -1,0 +1,7 @@
+@mixin page($mixinClass:'')
+    @if $mixinClass != ''
+        $mixinClass: '.#{$mixinClass}'
+
+    .page#{$mixinClass}
+        background-color: red
+        @content

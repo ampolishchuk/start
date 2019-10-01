@@ -19,11 +19,13 @@ PATHS.s_templates = `${PATHS.s_pages}/_templates`;
 
 // Имена файлов .pug в директории разработки
 PATHS.a_templates = fs.readdirSync(PATHS.s_templates)
-PATHS.a_pages = fs.readdirSync(PATHS.s_pages)
-PATHS.a_pages.pop()
+PATHS.a_pages = fs.readdirSync(PATHS.s_pages).filter(s_pageName => !s_pageName.startsWith('_'))
 
+console.log('Templates: ')
 console.log(PATHS.a_templates)
+console.log('Pages: ')
 console.log(PATHS.a_pages)
+
 
 module.exports = {
     externals: {

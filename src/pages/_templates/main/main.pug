@@ -1,5 +1,4 @@
-include ../../../pug/mixins
-include ../../../blocks/blocks
+include ../../../core/init
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -7,14 +6,10 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        +css("main.css")
         block css
         title 
             block title
     body
-        block body 
-
-        +js('vendors.js')
-        +js('main.js')       
-        block js
-
+        block body   
+        block js     
+        

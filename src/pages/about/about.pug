@@ -1,14 +1,18 @@
 extends ../_templates/main/main
 
 block css
+    +css("main.css")
     +css("about.css")
 block title 
     | about.html
 block body 
-    +header()
-        +logo('header-logo')
-        +menu('header-menu')
-    +main()
-    +footer()
+    +page()
+        +header()
+            +logo('header-logo')
+            +menu('header-menu')
+        +main()
+        +footer()
 block js
+    +js('vendors.js')
+    +js('main.js')  
     +js('about.js')
