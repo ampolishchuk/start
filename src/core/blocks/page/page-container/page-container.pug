@@ -1,0 +1,6 @@
+mixin page-container(mixinClass)
+    - var mixinClass = mixinClass?' ' + mixinClass:''
+
+    div(class=`page-container${mixinClass}`)
+        
+        block

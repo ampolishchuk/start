@@ -1,7 +1,11 @@
 @import '../../core/init'
 
-@include header()
-    @include search()
-        @include input()
-        @include button()   
-            color: red
+@include page()
+    @include header()
+        @include page-container()
+            @include logo()
+            @include search()
+                @include input()
+                @include button()   
+                    color: red
+            @include avatar()

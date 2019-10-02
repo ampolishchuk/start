@@ -1,8 +1,7 @@
-@mixin main($mixinClass:'')
+@mixin avatar($mixinClass:'')
     @if $mixinClass != ''
         $mixinClass: '.#{$mixinClass}'
 
-    main#{$mixinClass}
+    .avatar#{$mixinClass}
         
-
         @content

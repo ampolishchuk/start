@@ -1,7 +1,0 @@
-mixin skills-item([title, src, description], mixinClass)
-    - var mixinClass = mixinClass?' ' + mixinClass:'';
-
-    div(class=`skill${mixinClass}`)
-        h3.skills-item-title #{title}
-        img(class="skills-item-image" src=src, alt="", srcset="")
-        p.skills-item-description #{description}

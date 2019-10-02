@@ -10,11 +10,13 @@ block title
 block body 
     +page()
         +header()
-            +search()
-                +input()
-                +button('searchButton')
-        +avatar()
-block js
+            +page-container('header-container')
+                +logo()
+                +search()
+                    +input()
+                    +button('searchButton')
+                +avatar()
+
     +js('vendors.js')
     +js('main.js')  
     +js('index.js')

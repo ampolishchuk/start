@@ -1,6 +1,8 @@
+include page-container/page-container
+
 mixin page(mixinClass)
     - var mixinClass = mixinClass?' ' + mixinClass:''
 
-    div(class=`page${mixinClass}`)
+    body(class=`page${mixinClass}`)
         
         block

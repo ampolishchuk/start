@@ -1,8 +1,7 @@
-@mixin footer($mixinClass:'')
+@mixin page-container($mixinClass:'')
     @if $mixinClass != ''
         $mixinClass: '.#{$mixinClass}'
 
-    footer#{$mixinClass}
+    .page-container#{$mixinClass}
         
-
         @content
