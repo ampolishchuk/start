@@ -1,10 +1,4 @@
-import * as blocks from '../../core/init'
+import * as b from '../../core/init/init'
 import './index.sass';
 
-
-blocks.page()
-    .header()
-        .search()
-            .input()
-            .button()
-        .avatar()
+b.page()

@@ -1,9 +1,11 @@
-@import 'page-container/page-container'
-
 @mixin page($mixinClass:'')
     @if $mixinClass != ''
         $mixinClass: '.#{$mixinClass}'
 
-    .page#{$mixinClass}
-        background-color: red
+    * 
+        margin: 0
+        padding: 0
+
+    >.page#{$mixinClass}
+        
         @content

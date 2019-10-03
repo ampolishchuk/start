@@ -1,2 +1,2 @@
-import * as blocks from '../../../core/init'
+import * as blocks from '../../../core/init/init'
 import './main.sass';
