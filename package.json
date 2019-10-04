@@ -1,7 +1,6 @@
 {
-  "name": "test",
+  "name": "DSD first Project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config ./config/webpack.build.config.js",
@@ -31,5 +30,14 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1",
     "webpack-merge": "^4.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ampolishchuk/start.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ampolishchuk/start/issues"
+  },
+  "homepage": "https://github.com/ampolishchuk/start#readme",
+  "description": ""
 }
