@@ -4,12 +4,11 @@ include ../../core/init/init
 
 block css
     +css("main.css")
-    +css("index.css")
+    +css("uikit.css")
 block title 
     | index.html
 block body 
-    +page()
-        
+    +b_page()
     +js('vendors.js')
     +js('main.js')  
-    +js('index.js')
+    +js('uikit.js')

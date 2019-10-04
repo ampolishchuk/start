@@ -1,3 +1,4 @@
-import page from '../blocks/page/page';
+import b_page from '../blocks/page/page';
 
-export {page}
+
+export {b_page}

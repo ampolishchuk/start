@@ -1,4 +1,4 @@
 import * as b from '../../core/init/init'
-import './index.sass';
+import './uikit.sass';
 
-b.page()
+b.b_page()

@@ -20,7 +20,12 @@ PATHS.s_templates = `${PATHS.s_pages}/_templates`;
 
 // Имена файлов .pug в директории разработки
 PATHS.a_blocks = fs.readdirSync(PATHS.s_blocks)
-PATHS.a_pages = fs.readdirSync(PATHS.s_pages).filter(s_pageName => !s_pageName.startsWith('_'))
+PATHS.a_blocksWithImg = PATHS.a_blocks.filter((s_blockName) => {        
+    return fs.readdirSync(`${PATHS.s_blocks}/${s_blockName}`).filter(s_folderName => s_folderName == 'img').length > 0?true:false;
+})
+
+PATHS.a_pages = fs.readdirSync(PATHS.s_pages)
+                    .filter(s_pageName => !s_pageName.startsWith('_'))
 PATHS.a_templates = fs.readdirSync(PATHS.s_templates)
 
 let entires = {}
@@ -35,6 +40,8 @@ PATHS.a_templates.map((s_templateName) => {
 
 console.log('Blocks: ')
 console.log(PATHS.a_blocks)
+console.log('Blocks img: ')
+console.log(PATHS.a_blocksImg)
 console.log('Pages: ')
 console.log(PATHS.a_pages)
 console.log('Templates: ')
@@ -115,7 +122,8 @@ module.exports = {
         }),
         new CopyWebpackPlugin([            
             { from: `${PATHS.s_src}/${PATHS.s_root}` },
-            ...PATHS.a_blocks.map(s_blockName => ({
+
+            ...PATHS.a_blocksWithImg.map(s_blockName => ({
                 from: `${PATHS.s_blocks}/${s_blockName}/img`,
                 to: `${PATHS.s_img}/${s_blockName}` 
             }))
